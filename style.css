@@ -13,14 +13,14 @@ A {text-decoration: none;}
 #f1 {position: absolute; width: 600px; height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; background: #111;}
 .decidir {display: flex; align-items: center; justify-content: center;}
 .si, .no, .weno, .dale, .salu, .copy, #f13 a, span.go, .carta {
-  font: 25px 'VT323', monospace; margin: 10px; opacity: 0;
+  font: 32px 'VT323', monospace; margin: 10px; opacity: 0;
   animation-name: visible;
   animation-duration: 1s; 
   animation-delay: 3.5s;
   animation-fill-mode: forwards; cursor: pointer; color: #f9f9f9;
 }
 .rega, .ojo, .afi, .anillo, .marry, .meme, .meme2, .yes {
-  font: 25px 'VT323', monospace; margin: 10px; opacity: 0;
+  font: 32px 'VT323', monospace; margin: 10px; opacity: 0;
   animation-name: visible;
   animation-duration: 1s; 
   animation-delay: 7s;
@@ -46,6 +46,9 @@ font: 26px 'VT323', monospace; text-align:justify; display: none;}
 #f19, #f20, #f21, #f22 {position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px; background: #111; display: none; align-items: center; justify-content: center; flex-direction: column;}
 #f22 { 
 font: 26px 'VT323', monospace; text-align:justify;}
+#f3 h1{
+  margin-left: -10px;
+}
 h1 {
   overflow: hidden; 
   border-right: .15em solid #fff; 
@@ -56,7 +59,7 @@ h1 {
   animation: 
   typing 3.5s steps(40, end),
   blink-caret .75s step-end infinite;
-  font: 30px 'VT323', monospace;
+  font: 36px 'VT323', monospace;
 }
 h3 {
   overflow: hidden; 
@@ -68,7 +71,7 @@ h3 {
   animation: 
   typing 3.5s steps(40, end),
   blink-caret .75s step-start;
-  font: 30px 'VT323', monospace;
+  font: 36px 'VT323', monospace;
 }
 h2 {
   overflow: hidden; 
@@ -80,7 +83,7 @@ h2 {
   animation: 
   typing 3.5s steps(40, end),
   blink-caret .75s step-end infinite;
-  font: 30px 'VT323', monospace;
+  font: 35px 'VT323', monospace;
   animation-delay: 3.5s; width: 0px; animation-fill-mode: forwards; text-align: center;
 }
 .img1 {width: 150px; height: 150px; background: url(./img/avatar1.png); background-size: cover;}

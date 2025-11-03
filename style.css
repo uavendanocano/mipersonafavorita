@@ -26,7 +26,7 @@ A {text-decoration: none;}
   animation-delay: 7s;
   animation-fill-mode: forwards; cursor: pointer; text-align: center;
 }
-#f2, #f3, #f4, #f5, #f6 {position: absolute; width: 600px; height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; display: none;} 
+#f2, #f3, #f4, #f5, #f6 {position: absolute; width: 690px; height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; display: none;} 
 #f7 {position: absolute; width: 850px; height: 550px; background: url(./img/mazmorra.png); background-size: cover; display: none; align-items: center; justify-content: center; flex-direction: column;}
 #f8, #f9 {position: absolute; bottom: 150px; left: 150px; right: 150px; display: none; align-items: center; justify-content: center; flex-direction: column;}
 #f10 {position: absolute; bottom: 140px; left: 150px; right: 150px; height: 160px; display: none; align-items: center; justify-content: center;}

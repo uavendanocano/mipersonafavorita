@@ -11,7 +11,7 @@ body {
 A {text-decoration: none;}
 #out-all {position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; display: flex; align-items: center; justify-content: center;}
 #f1 {position: absolute; width: 600px; height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column; background: #111;}
-.decidir {display: flex; align-items: center; justify-content: center;}
+.decidir {display: flex; align-items: center; justify-content: center;margin-top: 5px;}
 .si, .no, .weno, .dale, .salu, .copy, #f13 a, span.go, .carta {
   font: 25px 'VT323', monospace; margin: 10px; opacity: 0;
   animation-name: visible;

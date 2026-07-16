@@ -1,0 +1,817 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    linear-gradient(
+        135deg,
+        #ffd6e7,
+        #fff
+    );
+    font-family:
+    'Segoe UI',
+    sans-serif;
+}
+.container{
+    text-align:center;
+    padding:20px;
+    z-index:5;
+}
+/* CONFETI */
+#confetti{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:10;
+    transition:opacity 1s;
+}
+
+
+
+.confetti-piece{
+
+
+position:absolute;
+
+
+top:-20px;
+
+
+width:10px;
+
+height:18px;
+
+
+animation:
+fall linear forwards;
+
+
+}
+
+
+
+@keyframes fall{
+
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+}
+
+
+100%{
+
+
+transform:
+translateY(110vh)
+rotate(720deg);
+
+
+}
+
+
+
+}
+
+
+
+
+
+/* CAJA */
+
+
+.gift{
+
+
+position:relative;
+
+
+width:180px;
+
+height:150px;
+
+
+margin:auto;
+
+
+}
+
+
+
+.box{
+
+
+position:absolute;
+
+
+bottom:0;
+
+
+width:180px;
+
+height:120px;
+
+
+background:#e91e63;
+
+
+border-radius:10px;
+
+
+display:flex;
+
+
+align-items:center;
+
+justify-content:center;
+
+
+font-size:60px;
+
+
+}
+
+
+
+.lid{
+
+
+position:absolute;
+
+
+top:10px;
+
+
+width:180px;
+
+height:35px;
+
+
+background:#ad1457;
+
+
+border-radius:10px;
+
+
+z-index:2;
+
+
+transition:
+1s;
+
+
+}
+
+
+
+.gift.open .lid{
+
+
+transform:
+
+translateY(-80px)
+
+rotate(-20deg);
+
+
+}
+
+
+
+
+
+button{
+    margin-top:20px;
+    margin-bottom: 10px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#e91e63;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+
+
+button:hover{
+
+
+background:#ad1457;
+
+
+}
+
+
+
+
+
+/* CARTA */
+
+
+.letter{
+
+
+margin-top:30px;
+
+
+opacity:0;
+
+
+transform:
+
+translateY(80px)
+
+scale(.8);
+
+
+transition:
+
+opacity 1s ease,
+
+transform 1s ease;
+
+
+}
+
+
+
+.letter.show{
+
+
+opacity:1;
+
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+
+}
+
+
+
+
+.paper{
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fffdf5,
+        #f8efd8
+    );
+
+
+    width:90vw;
+
+    max-width:450px;
+
+
+    padding:35px;
+
+
+    border-radius:8px;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.18);
+
+
+    overflow:hidden;
+
+    border:
+
+    1px solid rgba(150,120,80,.25);
+
+}
+.paper::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+    radial-gradient(
+        circle at 20% 30%,
+        rgba(180,140,80,.12),
+        transparent 25%
+    ),
+
+
+    radial-gradient(
+        circle at 80% 70%,
+        rgba(180,140,80,.10),
+        transparent 30%
+    );
+
+
+    pointer-events:none;
+
+
+}
+.paper h2,
+.paper p,
+.signature{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.paper h2{
+
+
+color:#e91e63;
+
+
+}
+
+
+
+#message{
+
+    text-align:left;
+
+    font-size:18px;
+
+    line-height:1.5;
+    white-space: pre-line;
+    word-wrap:break-word;
+ font-family:'Special Elite', monospace;
+}
+
+
+
+
+/* CORAZONES */
+
+
+.heart{
+
+
+position:fixed;
+
+
+bottom:-20px;
+
+
+font-size:25px;
+
+
+animation:
+
+heartUp 4s linear forwards;
+
+
+}
+
+
+
+@keyframes heartUp{
+
+
+from{
+
+
+transform:
+
+translateY(0);
+
+
+opacity:1;
+
+
+}
+
+
+to{
+
+
+transform:
+
+translateY(-100vh);
+
+
+opacity:0;
+
+
+}
+
+
+}
+
+@media(max-width:480px){
+
+    .paper{
+
+        width:100%;
+
+        padding:20px;
+
+    }
+
+
+    #message{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* SOBRE */
+
+
+.envelope{
+
+    display:none;
+
+    margin-top:30px;
+
+    animation:
+    appear 1s ease;
+
+}
+
+
+
+.envelope-body{
+
+    width:300px;
+
+    height:180px;
+
+    background:#fff1f5;
+
+    border-radius:10px;
+
+    margin:auto;
+
+    position:relative;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.envelope-body::before{
+
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    border-left:150px solid transparent;
+
+    border-right:150px solid transparent;
+
+    border-top:90px solid #ffc1d9;
+
+}
+
+
+
+.seal{
+
+
+    position:absolute;
+
+    top:65px;
+
+    left:125px;
+
+
+    width:50px;
+
+    height:50px;
+
+
+    border-radius:50%;
+
+
+    background:#e91e63;
+
+
+    color:white;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:25px;
+
+
+    z-index:2;
+
+
+    cursor:pointer;
+
+
+    transition:.5s;
+
+}
+
+
+
+.seal.break{
+
+
+    transform:
+
+    scale(1.5)
+
+    rotate(30deg);
+
+
+    opacity:0;
+
+}
+
+
+
+@keyframes appear{
+
+
+from{
+
+opacity:0;
+
+transform:
+translateY(50px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+/* CURSOR MAQUINA DE ESCRIBIR */
+
+#cursor{
+
+    display:inline-block;
+
+    font-weight:bold;
+
+    animation:
+    blink .8s infinite;
+
+}
+
+
+@keyframes blink{
+
+
+    0%{
+
+        opacity:1;
+
+    }
+
+
+    50%{
+
+        opacity:0;
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+    }
+
+
+}
+
+/* FIRMA ANIMADA */
+
+
+.signature{
+
+    text-align:right;
+
+    font-size:18px;
+
+    font-family:
+    'Special Elite',
+    monospace;
+
+
+    opacity:0;
+
+
+    transform:
+    translateY(20px);
+
+
+    transition:
+
+    opacity 1.5s ease,
+
+    transform 1.5s ease;
+
+
+}
+
+
+.signature.show{
+
+
+    opacity:1;
+
+
+    transform:
+    translateY(0);
+
+
+}
+
+/* BOTON AMOR */
+
+
+.love-box{
+
+    opacity:0;
+
+
+    transform:
+    translateY(20px);
+
+
+    transition:
+
+    1s;
+
+
+}
+
+
+
+.love-box.show{
+
+
+    opacity:1;
+
+
+    transform:
+    translateY(0);
+
+
+}
+
+
+
+
+#loveButton{
+
+
+    background:#e91e63;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:12px 25px;
+
+
+    border-radius:30px;
+
+
+    font-size:16px;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+.love-message{
+
+    position:fixed;
+
+    top:10%;
+    left:50%;
+
+    width:100vw;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    padding:30px;
+
+
+    font-family:
+    'Special Elite',
+    monospace;
+
+
+    font-size:20px;
+
+
+    color:#e91e63;
+
+
+    background:
+    rgba(255,255,255,.85);
+
+
+    opacity:0;
+
+
+    visibility:hidden;
+
+
+    z-index:9999;
+
+
+    transition:
+
+    opacity .6s ease;
+
+
+}
+
+
+
+.love-message.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+.love-message.show{
+
+
+    opacity:1;
+
+
+    transform:
+
+    translate(-50%,-50%)
+    scale(1);
+
+
+}

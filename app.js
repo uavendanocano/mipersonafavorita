@@ -28,7 +28,7 @@ let confettiInterval;
 
 
 const text = `
-Hola Karla❤️
+Hola Karla ❤️
 
 Hoy quería darte un pequeño detalle...
 
@@ -39,7 +39,7 @@ por hacer especial cada momento y por estar conmigo.
 
 Deseo con todo mi corazón que pases un cumpleaños increíble.
 
-Te mereces el mundo entero. Te admiro mcuhísimo.
+Te mereces el mundo entero. Te admiro muchísimo.
 
 Te amodoro ❤️👻
 `;
